@@ -1,0 +1,14 @@
+.boxThumb {
+  height: 300px;
+  color: white;
+  border-radius: 10px;
+}
+
+.textThumb {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: fit-content;
+  margin-top: 225px;
+  padding: 15px;
+}

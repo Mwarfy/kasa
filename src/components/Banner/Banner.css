@@ -1,0 +1,23 @@
+.bannerImg {
+  width: 100%;
+  border-radius: 20px;
+  height: 225px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.bannerText {
+  position: absolute;
+  text-align: center;
+  font-size: 50px;
+  top: 0;
+  margin-top: auto;
+  right: 0;
+  margin-right: auto;
+  left: 0;
+  margin-left: auto;
+  bottom: 0;
+  margin-bottom: auto;
+  width: 800px;
+  height: 50px;
+  color: white;
+}

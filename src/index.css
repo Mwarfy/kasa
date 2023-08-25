@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.rounded {
+  border-radius: 10px;
+}
+.absolute {
+  position: absolute;
+}
+.gap {
+  gap: 20px;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.color-red {
+  color: #ff6060;
+}
+.background-red {
+  background: #ff6060;
+}
+.w-full {
+  width: 100%;
+}
+.returnHome:hover {
+  cursor: pointer;
+}
