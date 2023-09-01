@@ -1,0 +1,8 @@
+.tag {
+  color: white;
+  width: 175px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 10px;
+  text-align: center;
+}

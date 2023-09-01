@@ -21,7 +21,8 @@ export const Error404: React.FC = () => {
       <span
         className="returnHome"
         style={styleReturn()}
-        onClick={() => navigate("/")}>
+        onClick={() => navigate("/")}
+      >
         Retourner à la page d'accueil
       </span>
     </div>

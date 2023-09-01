@@ -1,16 +1,16 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Home } from "./routes/Home";
-import { Logements } from "./routes/Logements";
+import { Footer } from "./components/Footer";
+import { Navbar } from "./components/Navbar";
 import { About } from "./routes/About";
 import { Error404 } from "./routes/Error404";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
+import { Home } from "./routes/Home";
+import { Logements } from "./routes/Logements";
 
 const styleG = () => {
   return {
     paddingLeft: "100px",
     paddingRight: "100px",
-    paddingTop: "50px",
+    paddingTop: "30px",
     gap: "50px",
   };
 };
@@ -18,16 +18,22 @@ const styleG = () => {
 export const App: React.FC = () => {
   return (
     <Router>
-      <div className="flex flex-col color-red" style={styleG()}>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/logements" element={<Logements />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/*" element={<Error404 />} />
-        </Routes>
+      <div
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
+        <div className="flex flex-col color-red" style={styleG()}>
+          <Navbar />
+          <div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/logements" element={<Logements />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/*" element={<Error404 />} />
+            </Routes>
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 };

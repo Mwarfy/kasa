@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 .flex {
   display: flex;
@@ -10,17 +15,40 @@ body {
 .rounded {
   border-radius: 10px;
 }
+.pointer {
+  cursor: pointer;
+}
 .absolute {
   position: absolute;
+}
+.relative {
+  position: relative;
 }
 .gap {
   gap: 20px;
 }
+.gap-1 {
+  gap: 10px;
+}
 .justify-between {
   justify-content: space-between;
 }
+.py-20 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.px-100 {
+  padding-right: 100px;
+  padding-left: 100px;
+}
 .items-center {
   align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.color-white {
+  color: white;
 }
 .color-red {
   color: #ff6060;
@@ -28,8 +56,21 @@ body {
 .background-red {
   background: #ff6060;
 }
+.background-gray {
+  background: #f6f6f6;
+}
+
 .w-full {
   width: 100%;
+}
+.mt {
+  margin-top: 20px;
+}
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
 }
 .returnHome:hover {
   cursor: pointer;
