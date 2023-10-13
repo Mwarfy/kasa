@@ -16,7 +16,8 @@ export const Card: React.FC<{
         navigate("/logements", {
           state: { id: i },
         })
-      }>
+      }
+    >
       <img src={img} className="w-full rounded" />
       <div className="textThumb absolute">
         <span>{title}</span>

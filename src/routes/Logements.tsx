@@ -10,6 +10,14 @@ import "./Logement.css";
 export const Logements: React.FC = () => {
   const location = useLocation();
   const id = location.state.id;
+  const DropdownStyle = () => {
+    return {
+      display: "grid",
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+      gap: "100px",
+      marginBottom: "50px",
+    };
+  };
   return (
     <div className="flex flex-col gap">
       <Carroussel img={data[id].pictures} />
