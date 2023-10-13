@@ -1,0 +1,21 @@
+.styleG {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 30px;
+  gap: 50px;
+}
+@media (max-width: 1250px) {
+  .styleG {
+    padding: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .styleG {
+    padding: 20px;
+  }
+}
+.routeStyle {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

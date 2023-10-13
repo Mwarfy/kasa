@@ -1,0 +1,16 @@
+@media (max-width: 800px) {
+  .mediaQueryLogement {
+    display: flex;
+    flex-direction: column;
+  }
+  .mediaQueryLogementProfil {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .mediaQueryLogementProfil div {
+    margin-bottom: 0;
+    gap: 10px;
+  }
+}

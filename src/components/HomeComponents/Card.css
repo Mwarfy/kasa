@@ -1,0 +1,19 @@
+.boxThumb {
+  height: 300px;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.textThumb {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(transparent, black);
+  gap: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 90%;
+  height: fit-content;
+  place-self: end;
+  padding: 5%;
+}

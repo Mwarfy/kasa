@@ -1,0 +1,15 @@
+.dropdownStyle {
+  padding: 20px;
+  border-radius: 0 0 20 20;
+}
+
+@media (max-width: 1250px) {
+  .mediaQuery {
+    height: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .mediaQuery {
+    height: 20px;
+  }
+}

@@ -1,0 +1,9 @@
+.imgStyle {
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.titleStyle {
+  font-size: 25px;
+  font-weight: "semi-bold";
+}
