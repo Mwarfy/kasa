@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { Dropdown } from "../components/Dropdown";
 import { Carroussel } from "../components/LogementsComponents/Carroussel";
 import { Profil } from "../components/LogementsComponents/Profil";
@@ -8,41 +8,34 @@ import data from "../logements.json";
 import "./Logement.css";
 
 export const Logements: React.FC = () => {
-  const location = useLocation();
-  const id = location.state.id;
-  const DropdownStyle = () => {
-    return {
-      display: "grid",
-      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-      gap: "100px",
-      marginBottom: "50px",
-    };
-  };
+  let { id } = useParams();
+  const i = Number(id);
+
   return (
     <div className="flex flex-col gap">
-      <Carroussel img={data[id].pictures} />
+      <Carroussel img={data[i].pictures} />
       <div className="mediaQueryLogement flex justify-between">
         <div className="flex flex-col justify-between">
-          <Profil title={data[id].title} location={data[id].location} />
-          <Tags tags={data[id].tags} />
+          <Profil title={data[i].title} location={data[i].location} />
+          <Tags tags={data[i].tags} />
         </div>
         <div className="mediaQueryLogementProfil flex flex-col">
           <div className="flex items-center gap mb-10">
-            <span className="pre">{data[id].host.name.replace(" ", "\n")}</span>
-            <img className="imgStyle" src={data[id].host.picture} />
+            <span className="pre">{data[i].host.name.replace(" ", "\n")}</span>
+            <img className="imgStyle" src={data[i].host.picture} />
           </div>
-          <Stars stars={Number(data[id].rating)} />
+          <Stars stars={Number(data[i].rating)} />
         </div>
       </div>
       <div className="DropdownStyle">
         <Dropdown
           title="Description"
-          description={data[id].description}
+          description={data[i].description}
           className="h-20"
         />
         <Dropdown
           title="Équipements"
-          description={data[id].equipments.join().replaceAll(",", "\n")}
+          description={data[i].equipments.join().replaceAll(",", "\n")}
           className="h-20"
         />
       </div>

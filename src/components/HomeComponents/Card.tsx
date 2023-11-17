@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./Card.css";
 
 export const Card: React.FC<{
@@ -9,14 +9,11 @@ export const Card: React.FC<{
   img: string;
 }> = ({ title, location, i, img }) => {
   const navigate = useNavigate();
+
   return (
     <div
       className="flex boxThumb pointer"
-      onClick={() =>
-        navigate("/logements", {
-          state: { id: i },
-        })
-      }>
+      onClick={() => navigate(`/logements/${i}`)}>
       <img src={img} className="w-full rounded" />
       <div className="textThumb absolute">
         <span>{title}</span>
